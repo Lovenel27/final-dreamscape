@@ -1,4 +1,4 @@
-import { Link, useRouter } from "expo-router"; 
+import { Link, useRouter } from "expo-router";
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, ScrollView, Image } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useState, useEffect } from "react";
@@ -78,6 +78,7 @@ const Home = () => {
 
         {/* Categories */}
         <Text style={styles.sectionTitle}>🗺️ Explore By Category</Text>
+
         <Link href="/beaches" asChild>
           <TouchableOpacity style={styles.card}>
             <Ionicons name="sunny" size={28} color="#ffb703" />
@@ -99,20 +100,33 @@ const Home = () => {
           </TouchableOpacity>
         </Link>
 
-         <Link href="/my-bookings" asChild>
+        <Link href="/my-bookings" asChild>
           <TouchableOpacity style={styles.card}>
             <Ionicons name="clipboard" size={28} color="#06d6a0" />
             <Text style={styles.cardText}>My Bookings</Text>
           </TouchableOpacity>
         </Link>
 
-          <Link href="/goals/create" asChild>
+        <Link href="/goals/create" asChild>
           <TouchableOpacity style={styles.card}>
             <Ionicons name="add-circle" size={28} color="#0096c7" />
             <Text style={styles.cardText}>Add Your Goal Destination</Text>
           </TouchableOpacity>
         </Link>
 
+       <TouchableOpacity style={styles.card} onPress={() => router.push("/Profile")}>
+  <Ionicons name="person-circle" size={28} color="#8338ec" />
+  <Text style={styles.cardText}>My Profile</Text>
+</TouchableOpacity>
+
+
+        {/* ℹ️ About Us */}
+        <Link href="/about" asChild>
+          <TouchableOpacity style={styles.card}>
+            <Ionicons name="information-circle" size={28} color="#fb8500" />
+            <Text style={styles.cardText}>About Us</Text>
+          </TouchableOpacity>
+        </Link>
 
         {/* Book Now */}
         <TouchableOpacity style={styles.bookBtn} onPress={() => router.push("/booking")}>
