@@ -50,3 +50,4 @@ const styles = StyleSheet.create({
   description: { fontSize: 16, color: "#333", lineHeight: 24, textAlign: "center", paddingHorizontal: 10 },
   credit: { marginTop: 30, fontSize: 14, color: "#555", fontStyle: "italic", textAlign: "center", marginBottom: 30 },
 });
+//
